@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 const yargs = require('yargs/yargs')
 const { hideBin } = require('yargs/helpers')
-const { boolean } = require('yargs')
 
 const argv = yargs(hideBin(process.argv)).option(
     "year", {
@@ -17,7 +16,7 @@ const argv = yargs(hideBin(process.argv)).option(
     }
 ).argv
 
-console.log(argv)
+// console.log(argv)
 
 const date = new Date()
 
