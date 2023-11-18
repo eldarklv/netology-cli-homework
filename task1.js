@@ -18,9 +18,9 @@ const argv = yargs(hideBin(process.argv)).option("logs", {
   demandOption: true,
 }).argv;
 
-console.log(argv);
 const dir = path.join(__dirname, "logs");
 const filePath = path.join(dir, argv.logs);
+console.log(filePath);
 
 // создать дирректорию logs, если ее нет
 if (!fs.existsSync(dir)) {
@@ -30,7 +30,7 @@ if (!fs.existsSync(dir)) {
 }
 
 async function startGame() {
-  console.log("ОРЕЛ И РЕШКА: отгадай случайное число (1 или 2) \n");
+  console.log("ОРЕЛ И РЕШКА: отгадай случайное число (1 или 2) \n ");
 
   // создать дирректорию logs, если ее нет
   if (!fs.existsSync(dir)) {
@@ -40,7 +40,7 @@ async function startGame() {
   }
 
   // записываем в логи, что игра началась
-  const logGameStarted = "GAME START " + new Date() + "\n";
+  const logGameStarted = "GAME START " + new Date() + "\n ";
   await fs.appendFile(filePath, logGameStarted, (error) => {
     if (error) throw Error(error);
   });
@@ -49,7 +49,7 @@ async function startGame() {
   const randomNumber = helper.getRandomInt(1, 3); // не включая 3
   await fs.appendFile(
     filePath,
-    `GENERATED randomNumber=${randomNumber} \n`,
+    `GENERATED randomNumber=${randomNumber} \n `,
     (error) => {
       if (error) throw Error(error);
     }
@@ -57,15 +57,15 @@ async function startGame() {
 
   console.log(randomNumber); // читы
 
-  // запрашиваем ответ от игрока, логгируем его действие 
+  // запрашиваем ответ от игрока, логгируем его действие
   let gameResult = "";
   rl.question("Введите число: ", async (answer) => {
     if (+answer !== randomNumber) {
       console.log("Неверно");
-      gameResult = "GAME LOSE \n";
+      gameResult = "GAME LOSE \n ";
       await fs.appendFile(
         filePath,
-        `USER ACTION wrong answer=${answer} \n`,
+        `USER ACTION wrong answer=${answer} \n `,
         (error) => {
           if (error) throw Error(error);
         }
@@ -75,7 +75,7 @@ async function startGame() {
       gameResult = "GAME WIN \n";
       await fs.appendFile(
         filePath,
-        `USER ACTION correct answer=${answer} \n`,
+        `USER ACTION correct answer=${answer} \n `,
         (error) => {
           if (error) throw Error(error);
         }

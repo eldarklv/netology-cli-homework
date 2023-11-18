@@ -1,12 +1,25 @@
-GAME START Sun Nov 19 2023 00:58:35 GMT+0300 (Moscow Standard Time)
-GENERATED randomNumber=1 
-USER ACTION wrong answer=2 
-GAME LOSE 
-GAME START Sun Nov 19 2023 01:08:25 GMT+0300 (Moscow Standard Time)
-GENERATED randomNumber=2 
-USER ACTION wrong answer=1 
-GAME LOSE 
-GAME START Sun Nov 19 2023 01:08:28 GMT+0300 (Moscow Standard Time)
-GENERATED randomNumber=1 
-USER ACTION wrong answer=2 
-GAME LOSE 
+GAME START Sun Nov 19 2023 02:15:19 GMT+0300 (Moscow Standard Time)
+ GENERATED randomNumber=1 
+ USER ACTION wrong answer=2 
+ GAME LOSE 
+ GAME START Sun Nov 19 2023 02:15:23 GMT+0300 (Moscow Standard Time)
+ GENERATED randomNumber=2 
+ USER ACTION correct answer=2 
+ GAME WIN 
+GAME START Sun Nov 19 2023 02:15:26 GMT+0300 (Moscow Standard Time)
+ GENERATED randomNumber=1 
+ USER ACTION wrong answer=2 
+ GAME LOSE 
+ GAME START Sun Nov 19 2023 02:20:09 GMT+0300 (Moscow Standard Time)
+ GENERATED randomNumber=2 
+ USER ACTION correct answer=2 
+ GAME WIN 
+GAME START Sun Nov 19 2023 02:20:43 GMT+0300 (Moscow Standard Time)
+ GENERATED randomNumber=2 
+ USER ACTION correct answer=2 
+ GAME WIN 
+GAME START Sun Nov 19 2023 02:20:49 GMT+0300 (Moscow Standard Time)
+ GENERATED randomNumber=2 
+ USER ACTION wrong answer=1 
+ GAME LOSE 
+ 

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "bin": {
-    "orel-reshka": "./task1.js"
+    "orel-reshka": "./task1.js",
+    "parse-logs": "./task2.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
