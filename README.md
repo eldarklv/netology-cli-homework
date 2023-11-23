@@ -1,4 +1,4 @@
-# netology-cli-homework
+# netology-weather-app-homework
 
 Пример запуска: weather --city=kazan
 
