@@ -1,1 +1,2 @@
-# netology-cli-homework
+ДЗ: 2.4 Docker, установка и настройка
+
