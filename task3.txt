@@ -1,0 +1,42 @@
+Задание 3 - Volumes
+
+1. Загрузите образ node версии 15.14
+
+docker pull node:15.14
+
+2. Запустите контейнер с именем first_node из образа node версии 15.14 в фоновом режиме, подключив папку data из текущей директории в /var/first/data контейнера
+
+docker run --name first_node -d -v /Users/ikuluev/Desktop/Нетология/my-homework/data:/var/first/data node:15.14 tail -f /dev/null
+
+3. Запустите контейнер с именем second_node из образа node версии 15.14 в фоновом режиме, подключив папку data из текущей директории в /var/second/data контейнера
+
+docker run --name second_node -d -v /Users/ikuluev/Desktop/Нетология/my-homework/data:/var/second/data node:15.14 tail -f /dev/null
+
+4. Подключитесь к контейнеру first_node с помощью exec и создайте текстовый файл любого содержания в /var/first/data
+
+docker exec -it first_node sh
+echo "Hello Docker" > /var/first/data/myfile.txt
+
+5. Добавьте еще один файл в папку data на хостовой машине
+
+echo "Hello Docker" > /Users/ikuluev/Desktop/Нетология/my-homework/data/myfile2.txt (выполняется не внутри контейнера)
+
+6. Подключитесь к контейнеру second_node с помощью exec и получите список файлов в директории /var/second/data, выведете на экран содержимое файлов
+
+docker exec -it second_node sh
+cd /var/second/data
+ls
+
+7. Остановите оба контейнера
+
+docker stop first_node
+docker stop second_node
+
+8. Удалите оба контейнера
+
+docker rm first_node
+docker rm second_node
+
+9. Удалите образ node версии 15.14
+
+docker rmi node:15.14
